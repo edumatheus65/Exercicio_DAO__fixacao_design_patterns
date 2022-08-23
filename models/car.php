@@ -41,4 +41,13 @@ class {
     public function setColor($color) {
         $this->color = $color;
     }
+
+}
+
+
+interface CarDAO {
+
+    public function create(car $car);
+
+    public function findAll();
 }
