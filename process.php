@@ -1,11 +1,11 @@
 <?php
 
 
-include_once("config.php");
+include_once("db.php");
 include_once("dao/CarDAO.php");
 
 
-$car = new CarDao($conn);
+$carDao = new CarDao($conn);
 
 $brand = $_POST["brand"];
 $km = $_POST["km"];
