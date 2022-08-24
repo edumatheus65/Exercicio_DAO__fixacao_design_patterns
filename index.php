@@ -4,7 +4,7 @@ include_once("db.php");
 
 ?>
 
-<h1>Insira as Informações do seu veículo</h1>
+<h1>Insira as Informações do seu Veículo</h1>
 <form action="process.php" method="POST">
 
     <label for="brand">Marca do carro:</label>
