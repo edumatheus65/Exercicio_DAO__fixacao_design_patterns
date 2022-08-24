@@ -10,7 +10,29 @@ class CarDAO implements CarDAOInterface {
         $this->conn = $conn;
     }
 
-    public function findAll() {
+    public function findAll(){
+
+        $cars = [];
+
+        $stmt = $this->conn->query("SELECT * FROM cars");
+
+        $data = $stmt->fetchAll();
+
+        foreach($data as $item) {
+
+            $car = new Car();
+
+            $car->setId($item["id"]);
+            $car->setBrand($item["brand"]);
+            $car->setKm($item["km"]);
+            $car->setColor($item["color"]);
+
+            $cars[] = $car;
+        }
+
+        return $cars;
+
+
 
     }
 
